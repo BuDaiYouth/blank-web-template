@@ -42,7 +42,7 @@
 
 <script>
 import {login} from "@/api/authApi";
-import {setToken} from "@/util/TokenUtil";
+import {saveUser, setToken} from "@/util/TokenUtil";
 import {Encrypt} from "@/util/AES";
 
 export default {
@@ -71,6 +71,7 @@ export default {
             const data = res.data
             if (data.data) {
               setToken(res.headers['token'])
+              saveUser(this.loginForm.username)
               this.$router.push("/home")
             } else {
               this.$notify.error({

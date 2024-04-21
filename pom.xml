@@ -18,7 +18,7 @@
         <module>template-common</module>
         <module>template-basic</module>
         <module>template-application</module>
-        <!--        <module>template-web</module>-->
+        <module>template-web</module>
     </modules>
 
     <build>
