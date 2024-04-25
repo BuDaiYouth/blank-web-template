@@ -14,13 +14,10 @@ public class TokenTest {
     public static final Long JWT_TTL = TimeUnit.MINUTES.toMillis(5);
 
     public static void main(String[] args) throws Exception {
+        generateJwt();
     }
 
-    private void generatePwd() {
-
-    }
-
-    private void generateJwt() throws Exception {
+    private static void generateJwt() throws Exception {
         String userId = "user";
         String token = JwtTokenUtil.createJWT(userId, JWT_TTL);
         System.out.println("Token value: " + token);
