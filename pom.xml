@@ -17,7 +17,7 @@
         <module>template-parent</module>
         <module>template-common</module>
         <module>template-basic</module>
-        <module>template-application</module>
+        <module>template-server</module>
         <module>template-web</module>
     </modules>
 

@@ -10,7 +10,7 @@
         <relativePath>../template-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>template-application</artifactId>
+    <artifactId>template-server</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
