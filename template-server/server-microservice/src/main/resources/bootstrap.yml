@@ -1,0 +1,40 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /template/server
+
+spring:
+  application:
+    # Compare to nacos "Data Id"
+    name: template-microservice
+  profiles:
+    # <application-name>-dev.yml
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        # Register namespace, default: public
+        namespace: dev
+        server-addr: 127.0.0.1:8848
+      # Compare to nacos "Group", default: "DEFAULT_GROUP"
+      group: DEFAULT_GROUP
+      config:
+        # namespace, use the id not name
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        username: nacos
+        password: nacos
+        # suffix, default: properties
+        file-extension: yml
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        # Share config
+        shared-dataids: micro-common.yml
+
+logging:
+  config: classpath:logback-spring.xml
+
+basic:
+  cors:
+    host: "*"
+  filter:
+    enable: false
+    excludes: /api/basic/user/*
