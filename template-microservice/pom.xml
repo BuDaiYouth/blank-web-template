@@ -10,34 +10,14 @@
         <relativePath>../template-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>template-server</artifactId>
+    <artifactId>template-microservice</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>xyz.ibudai</groupId>
-            <artifactId>template-common</artifactId>
+            <artifactId>template-server</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>xyz.ibudai</groupId>
-            <artifactId>template-basic</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>xyz.ibudai</groupId>
-            <artifactId>template-protocol</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.pf4j</groupId>
-            <artifactId>pf4j</artifactId>
         </dependency>
     </dependencies>
 

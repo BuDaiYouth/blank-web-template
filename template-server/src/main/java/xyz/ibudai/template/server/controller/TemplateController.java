@@ -1,4 +1,4 @@
-package xyz.ibudai.template.controller;
+package xyz.ibudai.template.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
